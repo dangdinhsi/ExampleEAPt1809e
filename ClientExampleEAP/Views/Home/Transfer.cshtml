@@ -1,0 +1,21 @@
+﻿@model ClientExampleEAP.ExampleEAPService.Customer
+@{
+    ViewBag.Title = "Transfer";
+    var customer = ViewBag.customer;
+}
+
+<h2>Transfer</h2>
+<form action="/Home/GetTranfer" method="get">
+    <label>scode</label>
+    <input type="text" readonly name="scode" value="@Model.Code" />
+    <br />
+    <label>money</label>
+    <input type="text" readonly name="money" value="@Model.CurrentMoney" />
+    <br />
+    <label>Rcode</label>
+    <input type="text" name="rcode" value="" />
+    <label>Amount</label>
+    <input type="text" name="amout" value="" />
+    <br />
+    <input type="submit" value="Save" />
+</form>
